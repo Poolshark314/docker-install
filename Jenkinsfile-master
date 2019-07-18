@@ -11,7 +11,7 @@ pipeline {
         }
         stage('Install prerequisite packages') {
             steps {
-                sh 'sudo apt install apt-transport-https ca-certificates curl software-properties-common'
+                sh 'sudo apt install apt-transport-https ca-certificates curl software-properties-common -Y'
             }
         }
         stage('Add the GPG key to verify the Docker download') {
